@@ -24,17 +24,17 @@ type API_TYPE = {
 };
 
 export const API_URL: API_TYPE = {
-  // development: 'http://192.168.1.83:8088',
+  // development: 'http://124.71.147.249:8004',
   development: 'http://wms-server.dev.goktech.cn',
-  production: 'http://wms-server.dev.goktech.cn',
+  production: 'http://124.71.147.249:8004',
 };
 
 const Request = async (params: RequestParams): Promise<ResponseData> => {
   const { url, method, data, responseType = 'json' } = params;
   const tempUrl = API_URL[process.env.NODE_ENV || 'production'] + url;
-  const headers = {
+  const headers = localStorage.getItem('token') ? {
     token: localStorage.getItem('token') || '',
-  };
+  } : null
   try {
     const result = await axios({
       url: tempUrl,
