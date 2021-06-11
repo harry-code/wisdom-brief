@@ -20,22 +20,18 @@ export const RoutesData: routes[] = [
             {
                 title: '总编室初稿',
                 path: '/brief-firstDraft',
-                isLink: true,
             },
             {
                 title: '总编室审批',
                 path: '/brief-examine',
-                isLink: true
             },
             {
                 title: '稿件合并',
                 path: '/brief-combine',
-                isLink: true
             },
             {
                 title: '简报管理',
                 path: '/brief-manage',
-                isLink: true
             }
         ],
     },
@@ -46,7 +42,6 @@ export const RoutesData: routes[] = [
             {
                 title: '简报查询',
                 path: '/brief-search',
-                isLink: true
             }
         ]
     }

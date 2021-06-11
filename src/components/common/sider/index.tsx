@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Menu } from 'antd';
 import { RoutesData, routes } from '~/routes';
 import { useHistory } from 'react-router-dom';
@@ -31,9 +31,9 @@ function Sider() {
         className="sider"
         onClick={handleClick}
         onOpenChange={onOpenChange}
-        // defaultSelectedKeys={['/brief-manage']}
+        defaultSelectedKeys={['/brief-firstDraft']}
         openKeys={openKeys}
-        defaultOpenKeys={['/brief-manage']}
+        defaultOpenKeys={['/brief-firstDraft']}
         style={{ width: 256 }}>
         {RoutesData?.map((item: routes, index: number) => {
           return (
